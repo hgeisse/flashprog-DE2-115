@@ -1,0 +1,10 @@
+This is a Flash ROM programmer for Terasic's DE2-115 board (for
+the additional 8 MB Flash, *not* the FPGA's configuration memory).
+The programmer consists of two parts. The circuit on the FPGA
+reads command bytes from a serial port. The commands are low-level
+instructions, "bit-banging" the various input lines of the Flash
+memory. The software running on the host offers command-line
+options for device identification, erasing, checking, reading,
+programming, and verifying the contents of the Flash ROM. The
+program translates these high-level tasks into command bytes,
+which are sent over the serial line to the board.
